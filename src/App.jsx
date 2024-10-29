@@ -8,7 +8,7 @@ import {Services_Newborn} from "./components/Services_Newborn.jsx";
 function App() {
     const [headerBackground, setHeaderBackground] = useState('transparent');
     const [headerTop, setHeaderTop] = useState('50px')
-    const [headerHeight, setHeaderHeight] = useState('15vh')
+    const [headerHeight, setHeaderHeight] = useState('200px')
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
     const serviceMotherRef = useRef(null);
@@ -66,11 +66,11 @@ function App() {
                     if (newSection === 'home'){
                         setHeaderBackground('transparent')
                         setHeaderTop('50px')
-                        setHeaderHeight('15vh')
+                        setHeaderHeight('200px')
                     }else{
                         setHeaderBackground('rgba(197, 105, 5, 0.75)')
                         setHeaderTop('20px')
-                        setHeaderHeight('12vh')
+                        setHeaderHeight('100px')
                     }
                 }
 
