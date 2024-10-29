@@ -4,30 +4,26 @@ import { Home } from "./components/Home.jsx";
 import { AboutUs } from "./components/AboutUs.jsx";
 import {Services_Mother} from "./components/Services_Mother.jsx";
 import {Services_Newborn} from "./components/Services_Newborn.jsx";
-
 function App() {
     const [headerBackground, setHeaderBackground] = useState('transparent');
-    const [headerTop, setHeaderTop] = useState('50px')
-    const [headerHeight, setHeaderHeight] = useState('200px')
+    const [headerTop, setHeaderTop] = useState('50px');
+    const [headerHeight, setHeaderHeight] = useState('200px');
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
     const serviceMotherRef = useRef(null);
     const serviceNewbornRef = useRef(null);
-    const [currentSection, setCurrentSection] = useState('home'); // Track current section
+    const [currentSection, setCurrentSection] = useState('home');
+    const [scrollProgress, setScrollProgress] = useState(0);
 
     const scrollToSection = (section) => {
-        // const targetRef = section === 'home' ? homeRef : aboutRef;
         let targetRef = null;
-        if (section === 'home'){
+        if (section === 'home') {
             targetRef = homeRef;
-        }
-        else if (section === 'about'){
+        } else if (section === 'about') {
             targetRef = aboutRef;
-        }
-        else if (section === 'services-mother'){
+        } else if (section === 'services-mother') {
             targetRef = serviceMotherRef;
-        }
-        else {
+        } else {
             targetRef = serviceNewbornRef;
         }
         if (targetRef.current) {
@@ -37,55 +33,58 @@ function App() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (homeRef.current && aboutRef.current) {
-                const homeTop = homeRef.current.offsetTop;
-                const aboutTop = aboutRef.current.offsetTop;
-                const serviceMotherTop = serviceMotherRef.current.offsetTop;
-                const serviceNewbornTop = serviceNewbornRef.current.offsetTop;
-                const scrollTop = document.documentElement.scrollTop;
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            setScrollProgress(scrollProgress);
+            const homeTop = homeRef.current.offsetTop;
+            const aboutTop = aboutRef.current.offsetTop;
+            const serviceMotherTop = serviceMotherRef.current.offsetTop;
+            const serviceNewbornTop = serviceNewbornRef.current.offsetTop;
 
-                // Determine current section based on scroll position
-                let newSection = '';
+            let newSection = '';
 
-                if (scrollTop < (aboutTop - homeTop) / 2) {
-                    newSection = 'home';
-                } else if (scrollTop < (serviceMotherTop - aboutTop) / 2 + aboutTop) {
-                    newSection = 'about';
-                } else if (scrollTop < (serviceNewbornTop - serviceMotherTop) / 2 +  serviceMotherTop ){
-                    newSection = 'services-mother';
+            if (scrollTop < aboutTop - (aboutTop - homeTop) / 2) {
+                newSection = 'home';
+            } else if (scrollTop < serviceMotherTop - (serviceMotherTop - aboutTop) / 2) {
+                newSection = 'about';
+            } else if (scrollTop < serviceNewbornTop - (serviceNewbornTop - serviceMotherTop) / 2) {
+                newSection = 'services-mother';
+            } else {
+                newSection = 'services-newborn';
+            }
+
+            if (newSection !== currentSection) {
+                setCurrentSection(newSection);
+                if (newSection === 'home') {
+                    setHeaderBackground('transparent');
+                    setHeaderTop('50px');
+                    setHeaderHeight('200px');
+                } else {
+                    setHeaderBackground('rgba(197, 105, 5, 0.75)');
+                    setHeaderTop('20px');
+                    setHeaderHeight('100px');
                 }
-                else {
-                    newSection = 'services-newborn';
-                }
-
-
-                // Only update state and scroll if the section changes
-                if (newSection !== currentSection) {
-                    setCurrentSection(newSection);
-                    scrollToSection(newSection);
-                    if (newSection === 'home'){
-                        setHeaderBackground('transparent')
-                        setHeaderTop('50px')
-                        setHeaderHeight('200px')
-                    }else{
-                        setHeaderBackground('rgba(197, 105, 5, 0.75)')
-                        setHeaderTop('20px')
-                        setHeaderHeight('100px')
-                    }
-                }
-
             }
         };
 
-
-
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll); // Clean up
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [currentSection]);
 
-    return(
+    return (
         <>
-            <Header background={headerBackground} top={headerTop} height={headerHeight}/>
+            <div style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: `${scrollProgress}%`,
+                height: '5px',
+                backgroundColor: 'white',
+                zIndex: 1000
+            }}></div>
+            <Header background={headerBackground} top={headerTop} height={headerHeight}
+                    onSectionClick={scrollToSection}/>
             <div ref={homeRef}>
                 <Home/>
             </div>
@@ -99,7 +98,7 @@ function App() {
                 <Services_Newborn/>
             </div>
         </>
-    )
+    );
 }
 
 export default App;
