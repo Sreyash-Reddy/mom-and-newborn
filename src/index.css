@@ -131,10 +131,23 @@
     right: 50px;
     z-index: 1001;
     top: 50px;
+    margin-top: 3px;
   }
 }
 
+@media only screen and (max-width: 500px){
+  .logo{
+    left: 30px;
+    font-size: 8px;
+  }
+}
 
+@media only screen and (max-width: 400px){
+  .logo{
+    left: 20px;
+    font-size: 8px;
+  }
+}
 
 /*HOME*/
 
@@ -232,6 +245,7 @@
     color: rgb(255, 255, 255);
     right: auto;
     left: calc(50% - 100px);
+    top: calc(50% - 100px);
     transform: translateX(-50%);
     display: block;
   }
@@ -689,6 +703,19 @@
   background-color: rgba(197, 105, 5, 1);
   border-radius: 50%;
   z-index: -1;
+  animation: animateblob 5s ease-in-out infinite;
+}
+
+@keyframes animateblob {
+  0%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
 }
 
 .background-blob-2{
@@ -700,6 +727,7 @@
   background-color: rgba(197, 105, 5, 1);
   border-radius: 50%;
   z-index: -1;
+  animation: animateblob 5s ease-in-out 4s infinite;
 }
 
 @media only screen and (max-width: 950px) {
