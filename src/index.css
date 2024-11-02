@@ -31,6 +31,13 @@
   animation: move 1s ease-in-out forwards;
 }
 
+.header .logo .subtext{
+  position: absolute;
+  width: 100%;
+  left: 87px;
+  top: 40px;
+}
+
 .header .logo img{
   height: 50px;
   width: 50px;
@@ -230,9 +237,13 @@
 
 @media only screen and (max-width: 650px) {
   .home .home-image img{
-    position: absolute;
-    width: 700px;
-    /*height: 800px;*/
+    transform: translateX(-100px);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .home .home-image img{
+    transform: translateX(-300px);
   }
 }
 
@@ -251,19 +262,15 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .home .home-image img{
-    position: absolute;
-    width: 550px;
-    /*height: 800px;*/
+    transform: translateX(-200px);
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 350px) {
   .home .home-image img{
-    position: absolute;
-    width: 450px;
-    /*height: 800px;*/
+    transform: translateX(-300px);
   }
 }
 
@@ -1179,4 +1186,131 @@
     height: 75px;
     width: 75px;
   }
+}
+
+.aim{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Exo 2", sans-serif;
+  overflow-x: hidden;
+  /*background-color: black;*/
+}
+
+
+.aim .aboutus-heading{
+  position: absolute;
+  top: 100px;
+  color: rgba(197, 105, 5, 1);
+}
+
+
+.aim .aboutus-heading h1::after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  background-color: rgba(197, 105, 5, 1);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+
+.aim .aboutus-body{
+  position: absolute;
+  top: 200px ;
+  /*background-color: black;*/
+  width: 100%;
+  height: calc(100% - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aim .aboutus-body .aboutus-image{
+  position: relative;
+  margin-left: 50px;
+}
+
+.aim .aboutus-body .aboutus-image img{
+  height: 300px;
+  border: 5px solid rgba(197, 105, 5, 0.5);
+  outline: 5px solid rgba(197, 105, 5, 1);
+  border-radius: 25px;
+  position: relative;
+  background-color: white;
+}
+
+.aim .aboutus-body .aboutus-image .background-mask{
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  border: 5px solid rgba(197, 105, 5, 0.5);
+  outline: 5px solid rgba(197, 105, 5, 1);
+  border-radius: 25px;
+}
+
+
+.aim .aboutus-body .aboutus-image .mask1{
+  transform: rotateZ(10deg);
+}
+
+.aim .aboutus-body .aboutus-image .mask2{
+  transform: rotateZ(20deg);
+}
+
+.aim .aboutus-body .aboutus-image .mask3{
+  transform: rotateZ(30deg);
+}
+
+.aim .aboutus-body .aboutus-description{
+  height: 400px;
+  width: 600px;
+  /*border: 5px solid rgba(197, 105, 5, 0.5);*/
+  /*outline: 5px solid rgba(197, 105, 5, 1);*/
+  border-radius: 25px;
+  /*background-color: black;*/
+}
+
+.aim .aboutus-body .aboutus-description h1{
+  color: rgba(197, 105, 5, 1);
+  text-align: center;
+}
+
+.aim .aboutus-body .aboutus-description .wrapper{
+  margin-top: 20px;
+}
+
+.aim .aboutus-body .aboutus-description h2{
+  font-size: 20px;
+  color: rgba(197, 105, 5, 0.75);
+  font-weight: 300;
+
+}
+
+.aim .aboutus-body .aboutus-description h4{
+  font-size: 15px;
+  color: rgba(197, 105, 5, 0.75);
+  text-align: center;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.aim .aboutus-body .aboutus-description .end-quote{
+  position: relative;
+  left: 575px;
+}
+
+.aim p{
+  text-align: right;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }

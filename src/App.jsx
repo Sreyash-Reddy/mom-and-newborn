@@ -4,12 +4,14 @@ import { Home } from "./components/Home.jsx";
 import { AboutUs } from "./components/AboutUs.jsx";
 import {Services_Mother} from "./components/Services_Mother.jsx";
 import {Services_Newborn} from "./components/Services_Newborn.jsx";
+import {Aim} from "./components/Aim.jsx";
 function App() {
     const [headerBackground, setHeaderBackground] = useState('transparent');
     const [headerTop, setHeaderTop] = useState('50px');
     const [headerHeight, setHeaderHeight] = useState('200px');
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
+    const aimRef = useRef(null);
     const serviceMotherRef = useRef(null);
     const serviceNewbornRef = useRef(null);
     const [currentSection, setCurrentSection] = useState('home');
@@ -21,7 +23,9 @@ function App() {
             targetRef = homeRef;
         } else if (section === 'about') {
             targetRef = aboutRef;
-        } else if (section === 'services-mother') {
+        } else if (section === 'aim') {
+            targetRef = aimRef;
+        }else if (section === 'services-mother') {
             targetRef = serviceMotherRef;
         } else {
             targetRef = serviceNewbornRef;
@@ -39,6 +43,7 @@ function App() {
             setScrollProgress(scrollProgress);
             const homeTop = homeRef.current.offsetTop;
             const aboutTop = aboutRef.current.offsetTop;
+            const aimTop = aimRef.current.offsetTop;
             const serviceMotherTop = serviceMotherRef.current.offsetTop;
             const serviceNewbornTop = serviceNewbornRef.current.offsetTop;
 
@@ -46,8 +51,10 @@ function App() {
 
             if (scrollTop < aboutTop - (aboutTop - homeTop) / 2) {
                 newSection = 'home';
-            } else if (scrollTop < serviceMotherTop - (serviceMotherTop - aboutTop) / 2) {
+            } else if (scrollTop < aimTop - (aimTop - aboutTop) / 2){
                 newSection = 'about';
+            } else if (scrollTop < serviceMotherTop - (serviceMotherTop - aimTop) / 2){
+                newSection = 'aim';
             } else if (scrollTop < serviceNewbornTop - (serviceNewbornTop - serviceMotherTop) / 2) {
                 newSection = 'services-mother';
             } else {
@@ -90,6 +97,9 @@ function App() {
             </div>
             <div ref={aboutRef}>
                 <AboutUs/>
+            </div>
+            <div ref={aimRef}>
+                <Aim/>
             </div>
             <div ref={serviceMotherRef}>
                 <Services_Mother/>
