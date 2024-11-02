@@ -45,7 +45,7 @@ export const Services_Newborn = () => {
     return (
         <div className="services-newborn">
             <div className="services-newborn-heading">
-                <h1>SERVICES TO MOTHER</h1>
+                <h1>SERVICES TO NEWBORN</h1>
             </div>
             <div className="services-newborn-container">
                 <div className="services-newborn-images">
