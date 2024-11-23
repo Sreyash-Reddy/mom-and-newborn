@@ -615,7 +615,7 @@
 
 .services-mother .services-mother-content {
   width: 500px;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,7 +739,7 @@
 
 @media only screen and (max-width: 950px) {
   .services-mother .services-mother-content{
-    height: 320px;
+    height: 400px;
     width: 350px;
   }
 

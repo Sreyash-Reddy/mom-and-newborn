@@ -36,8 +36,9 @@ export const Header = ({ background, top, height , onSectionClick }) => {
                 <ul>
                     <li onClick={() => onSectionClick('home')}><a>Home</a></li>
                     <li onClick={() => onSectionClick('about')}><a>About Us</a></li>
-                    <li onClick={() => onSectionClick('services-mother')}><a>Our Services</a></li>
-                    <li onClick={() => onSectionClick('services-newborn')}><a>Contact Us</a></li>
+                    <li onClick={() => onSectionClick('aim')}><a>Our Motto</a></li>
+                    <li onClick={() => onSectionClick('services-mother')}><a>Services to Mother</a></li>
+                    <li onClick={() => onSectionClick('services-newborn')}><a>Services to Newborn</a></li>
                 </ul>
             </div>
         </div>

@@ -10,35 +10,35 @@ export const Services_Newborn = () => {
     const services = [
         {
             title: "Oil application",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            content: "Oil application and massages to a little one has many positive aspects. Research proved that oil massage promotes the growth and development of newborns. As the newborn has dedicated skin, a good oil massage makes the skin healthy, moisturizes the skin and improves the skin health. Not only benefits the skin, it also relaxes the muscles and improves sleep, strengthening the bones and massage also helps for emotional development and strengthens their immune system by increasing blood circulation."
         },
         {
-            title: "Provide bath to the mother",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Bath to the child",
+            content: "Regular baths to the newborn child protect them from microorganisms. Baat and care of the skin helps to maintain the proper texture and avoid irritation and protect from inflammation. It also removes dead skin and improve blood circulation. By providing a bath to the child also enhancers physical energy level and improvement in clarity by relaxing the mind."
         },
         {
-            title: "Type of food items",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Sunlight exposure",
+            content: "Exposure to sunlight will reduce the bilirubin level and therefore it decreases risk of physiological jaundice. It also helps to produce vitamin D. Vitamin D helps the body to absorb calcium easily. Sunlight exposure also have other benefits like increasing the insulin and serotonin level and also helps to boost immune system by producing more white blood cells (WBC)."
         },
         {
-            title: "Educating and assisting mother for breastfeeding",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Umbilical cord stump care",
+            content: "Cord stump care helps to dry out easily and prevent infection. It also enhances good air circulation. Umbilical coat stem care provides the fastest and safest cord healing."
         },
         {
-            title: "Educate mother how to hold the baby",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Swaddling a baby",
+            content: "Wrapping the newborn with the soft cloth helps them to feel safe and secure by recreating the restricted space of the uterus. Safe swordling of newborn how many benefits like restricting hands and leg movement of infants, therefore their sleeping time will be more. It also helps to maintain board temperature and prevent heat loss."
         },
         {
-            title: "Educate about breastfeeding positions",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Care of eyes",
+            content: "A newborn will have a very sensitive eye and also it produces more mucus. Eye care is critical to the newborn to prevent infection in their early development. As the newborn eyes are more sensitive chances of infection are higher. Proper eye care not only prevent infection it also minimise future problems during vision development."
         },
         {
-            title: "Measures to improve milk supply",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Bonding",
+            content: "Bonding is the attachment developed between the mother and their newborn. Bonding is vital for emotional and physical development. It is not only the physical connection but also an emotional connection between the mother and the newborn. It also aids the brain development by releasing some hormones and chemicals. It helps to stimulate neural connection and aids for fast development of language, emotional regulation and cognitive skills."
         },
         {
-            title: "How to control stress and anxiety",
-            content: "Lorem ipsum dolor sit amet. Eos alias molestiae sed nihil dolor ut velit quia et blanditiis vero et nulla sunt. Ea nesciunt consequatur a facilis aperiam qui quis perspiciatis et repellendus atque aut inventore maxime eum corrupti galisum. Aut nemo eligendi quo expedita nemo in unde dolores aut dolores libero nam quod repellendus ab enim sunt? Non vitae enim et itaque nulla rem sequi quia. Est beatae optio vel temporibus corporis ad galisum quia aut dolores quia aut quisquam earum. 33 quia perspiciatis aut nemo quaerat hic sint delectus qui praesentium amet et consequuntur dolorum ab molestiae nemo aut consectetur iste. Est reprehenderit alias eum ipsa voluptatum ad assumenda galisum"
+            title: "Sitz bath",
+            content: "After normal vaginal delivery soreness and swelling in the perineal area is unavoidable. Sitz bath helps to alleviate pain in the perineal area. Wound healing will be very fast and reduces discomfort caused by cramps. Sitz bath also helps to reduce soreness, swelling and itchiness in the perineal area."
         },
     ];
 
@@ -50,7 +50,7 @@ export const Services_Newborn = () => {
             <div className="services-newborn-container">
                 <div className="services-newborn-images">
                     <div className="background-blob-1"></div>
-                    <img src="/assets/services-mother-1.jpeg" alt='body'/>
+                    <img src="/assets/services-baby.jpg" alt='body'/>
                     <div className="background-blob-2"></div>
                 </div>
                 <div className="services-newborn-content">
