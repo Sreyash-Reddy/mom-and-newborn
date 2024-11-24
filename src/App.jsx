@@ -5,6 +5,7 @@ import { AboutUs } from "./components/AboutUs.jsx";
 import {Services_Mother} from "./components/Services_Mother.jsx";
 import {Services_Newborn} from "./components/Services_Newborn.jsx";
 import {Aim} from "./components/Aim.jsx";
+import ContactUs from './components/ContactUs.jsx';
 function App() {
     const [headerBackground, setHeaderBackground] = useState('transparent');
     const [headerTop, setHeaderTop] = useState('50px');
@@ -14,6 +15,7 @@ function App() {
     const aimRef = useRef(null);
     const serviceMotherRef = useRef(null);
     const serviceNewbornRef = useRef(null);
+    const contactUsRef = useRef(null);
     const [currentSection, setCurrentSection] = useState('home');
     const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -27,8 +29,10 @@ function App() {
             targetRef = aimRef;
         }else if (section === 'services-mother') {
             targetRef = serviceMotherRef;
-        } else {
+        }else if (section === 'services-newborn') {
             targetRef = serviceNewbornRef;
+        } else {
+            targetRef = contactUsRef;
         }
         if (targetRef.current) {
             targetRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -46,6 +50,7 @@ function App() {
             const aimTop = aimRef.current.offsetTop;
             const serviceMotherTop = serviceMotherRef.current.offsetTop;
             const serviceNewbornTop = serviceNewbornRef.current.offsetTop;
+            const contactUsTop = contactUsRef.current.offsetTop;
 
             let newSection = '';
 
@@ -57,8 +62,10 @@ function App() {
                 newSection = 'aim';
             } else if (scrollTop < serviceNewbornTop - (serviceNewbornTop - serviceMotherTop) / 2) {
                 newSection = 'services-mother';
-            } else {
+            } else if (scrollTop < contactUsTop - (contactUsTop - serviceNewbornTop) / 2) {
                 newSection = 'services-newborn';
+            } else {
+                newSection = 'contact-us';
             }
 
             if (newSection !== currentSection) {
@@ -106,6 +113,9 @@ function App() {
             </div>
             <div ref={serviceNewbornRef}>
                 <Services_Newborn/>
+            </div>
+            <div ref={contactUsRef}>
+                <ContactUs />
             </div>
         </>
     );
