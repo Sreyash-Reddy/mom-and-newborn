@@ -1,11 +1,11 @@
 export const Aim = () => {
     return(
-        <div className="aim" >
+        <div className="aboutus" >
             <div className="aboutus-heading">
                 <h1>OUR MOTTO </h1>
             </div>
             <div className="aboutus-body">
-                <div className="aboutus-image">
+                <div className="aboutus-image aim-image">
                     <div className="background-mask mask1"></div>
                     <div className="background-mask mask2"></div>
                     <div className="background-mask mask3"></div>
