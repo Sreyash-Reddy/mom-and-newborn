@@ -1183,9 +1183,8 @@
   padding-top: 20px;
   padding-bottom: 10px;
 }
-
-
-.contactus{
+/* Basic container styles */
+.contactus {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -1193,5 +1192,415 @@
   display: flex;
   justify-content: center;
   font-family: "Exo 2", sans-serif;
-  /* background-color: #000; */
 }
+
+.contactus-heading {
+  position: absolute;
+  top: 100px;
+  color: rgba(197, 105, 5, 1);
+}
+
+.contactus .contactus-heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  background-color: rgba(197, 105, 5, 1);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.contact-us-container {
+  top: 30vh;
+  position: relative;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  font-family: "Exo 2", sans-serif;
+  color: rgba(197, 105, 5, 1);
+}
+
+@media only screen and (max-width: 950px){
+  .contact-us-container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    /* left: 25%; */
+  }
+}
+
+
+.map {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  background-color: rgba(197, 105, 5, 1);
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 950px){
+  .map {
+    width: 100%;
+    /* left: 10%;   */
+  }
+}
+
+.enquiry-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 50vh; /* Adjust the height as needed */
+  font-style: normal;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 950px){
+  .enquiry-container {
+    width: 100%;
+  }
+}
+
+.phone-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between the logo and number */
+  width: 100%;
+}
+
+.phone-number .data{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+.phone-number .data h1{
+  padding-left: 10px;
+}
+
+.phone-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.phone-number h1 {
+  font-size: 24px;
+  margin: 0;
+  /* font-family: Arial, sans-serif; */
+}
+
+.phone-number a{
+  text-decoration: none;
+  color: rgba(197, 105, 5, 1);
+}
+
+.enquiry-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(197, 105, 5, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Exo 2", sans-serif;
+  width: 350px;
+}
+
+.enquiry-button:hover {
+  background-color: rgba(197, 105, 5, 1);
+}
+
+/* Form Overlay and Blur Effect */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.enquiry-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
+  height: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.enquiry-form .submitBtn {
+  padding: 10px;
+  background-color: rgba(197, 105, 5, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  font-family: "Exo 2", sans-serif;
+}
+
+.enquiry-form button:hover {
+  background-color:rgba(197, 105, 5, 1);
+}
+
+.enquiry-form h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Form container styles */
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;  /* Space between rows */
+}
+
+/* Row styles */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;  /* Space between columns */
+  margin-top: 5px;
+}
+
+/* Field group styles */
+.field-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading styles */
+.field-group h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Input styles */
+.field-group input {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Optional: Add responsive styles */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+
+.services-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row-services {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;  /* Same gap as other rows */
+}
+
+.services-field-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-field-group h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 42px; /* Same height as input fields */
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.radio-option label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Add hover effect */
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .row, .row-services {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .radio-options {
+    padding: 12px 16px;
+  }
+}
+
+/* Form header styling */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Close button styling */
+  
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #666;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-family: "Exo 2", sans-serif;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Optional: Add hover effect to the form overlay for better UX */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Update enquiry form container styling if needed */
+.enquiry-form-container {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 600px;
+}
+
+/* Make sure form scrolls properly on mobile */
+@media (max-width: 600px) {
+  .enquiry-form-container {
+    width: 95%;
+    padding: 16px;
+    margin: 10px;
+  }
+  
+  .close-button {
+    right: -5px;
+    top: -5px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .phone-number h1 {
+    font-size: 17px;
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+  }
+}
+
