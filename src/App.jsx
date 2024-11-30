@@ -6,6 +6,7 @@ import {Services_Mother} from "./components/Services_Mother.jsx";
 import {Services_Newborn} from "./components/Services_Newborn.jsx";
 import {Aim} from "./components/Aim.jsx";
 import ContactUs from './components/ContactUs.jsx';
+import Footer from './components/Footer.jsx';
 function App() {
     const [headerBackground, setHeaderBackground] = useState('transparent');
     const [headerTop, setHeaderTop] = useState('50px');
@@ -117,6 +118,7 @@ function App() {
             <div ref={contactUsRef}>
                 <ContactUs />
             </div>
+            <Footer />
         </>
     );
 }
