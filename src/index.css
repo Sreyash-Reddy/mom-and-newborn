@@ -817,7 +817,7 @@
 
 .services-newborn .services-newborn-content {
   width: 500px;
-  height: 400px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -908,7 +908,7 @@
 
 @media only screen and (max-width: 950px) {
   .services-newborn .services-newborn-content{
-    height: 320px;
+    height: 280px;
     width: 350px;
   }
 
@@ -1188,7 +1188,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   font-family: "Exo 2", sans-serif;
@@ -1216,7 +1216,8 @@
 .contact-us-container {
   top: 30vh;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 500px;
   width: 80%;
   display: flex;
   font-family: "Exo 2", sans-serif;
@@ -1244,8 +1245,13 @@
 
 @media only screen and (max-width: 950px){
   .map {
-    width: 100%;
-    /* left: 10%;   */
+    width: 90%;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 20px;
   }
 }
 
@@ -1272,14 +1278,48 @@
   align-items: center;
   gap: 10px; /* Space between the logo and number */
   width: 100%;
+  border: 2px solid rgba(197, 105, 5, 1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  position: relative;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 50px;
 }
 
 .phone-number .data{
   display: flex;
   flex-direction: row;
   padding: 5px;
-  justify-content: center;
+  justify-content: center ;
   width: 100%;
+  line-height: 20px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 950px){
+  .phone-number{
+    width: 60%;
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .phone-number{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .phone-number{
+    width: 99%;
+  }
+
+  .phone-number p{
+    font-size: .75rem;
+  }
 }
 
 .phone-number .data h1{
@@ -1303,7 +1343,7 @@
 }
 
 .enquiry-button {
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: rgba(197, 105, 5, 0.9);
@@ -1313,7 +1353,14 @@
   cursor: pointer;
   transition: background-color 0.3s;
   font-family: "Exo 2", sans-serif;
-  width: 350px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 950px){
+  .enquiry-button{
+    width: 60%;
+  }
 }
 
 .enquiry-button:hover {
@@ -1601,6 +1648,41 @@ textarea {
     font-size: 17px;
     margin: 0;
     /* font-family: Arial, sans-serif; */
+  }
+}
+
+
+.footer{
+  /* height: 10px; */
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(197, 105, 5, 1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+  overflow: hidden;
+}
+
+.footer p{
+  border-collapse:collapse;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 950px){
+  .footer{
+    margin-top: 500px;
+
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .footer{
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

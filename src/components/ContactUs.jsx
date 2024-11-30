@@ -38,9 +38,14 @@ const ContactUs = () => {
 
         <div className="enquiry-container">
           <div className="phone-number">
+          <div className='data'>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="rgba(197, 105, 5, 1)" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+            <h1>Mrs.Smitha Das </h1> 
+            </div>
+            <p><i>MSc (N) - Maternal and child health nursing</i></p>
             <div className='data'>
             <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="rgba(197, 105, 5, 1)" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-            <h1>+91-7680804499</h1>
+            <h1><a href='tel:+91-7680804499'>+91-7680804499</a></h1>
             </div>
           <p></p>
           <div className='data'>
@@ -196,7 +201,7 @@ const ContactUs = () => {
 
         <div className="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.07885882704!2d80.20901174999999!3d13.04752545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1732464821350!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3806.050549944567!2d78.49621197516656!3d17.457294483441853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI3JzI2LjMiTiA3OMKwMjknNTUuNiJF!5e0!3m2!1sen!2sin!4v1732970354764!5m2!1sen!2sin"
             width="100%"
             height="400"
             style={{ border: 0 }}

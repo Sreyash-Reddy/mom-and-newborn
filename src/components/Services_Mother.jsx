@@ -17,8 +17,8 @@ export const Services_Mother = () => {
             content: "Traditional bath helps to promote partom healing, muscle relaxation, strengthen the body tissue and remove micro organisms from the body during postnatal period. Hot water bath not only helps for physical wellbeing it also plays a major role in the improvement of mental wellbeing, alleviate sickness and provide energy to the mother."
         },
         {
-            title: "Sitz Bath",
-            content: ""
+            title: "Sitz bath",
+            content: "After normal vaginal delivery soreness and swelling in the perineal area is unavoidable. Sitz bath helps to alleviate pain in the perineal area. Wound healing will be very fast and reduces discomfort caused by cramps. Sitz bath also helps to reduce soreness, swelling and itchiness in the perineal area."
         },
         { 
             title: "Type of food items during Postnatal period",

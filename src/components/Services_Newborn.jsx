@@ -35,11 +35,7 @@ export const Services_Newborn = () => {
         {
             title: "Bonding",
             content: "Bonding is the attachment developed between the mother and their newborn. Bonding is vital for emotional and physical development. It is not only the physical connection but also an emotional connection between the mother and the newborn. It also aids the brain development by releasing some hormones and chemicals. It helps to stimulate neural connection and aids for fast development of language, emotional regulation and cognitive skills."
-        },
-        {
-            title: "Sitz bath",
-            content: "After normal vaginal delivery soreness and swelling in the perineal area is unavoidable. Sitz bath helps to alleviate pain in the perineal area. Wound healing will be very fast and reduces discomfort caused by cramps. Sitz bath also helps to reduce soreness, swelling and itchiness in the perineal area."
-        },
+        }
     ];
 
     return (
